@@ -219,7 +219,7 @@ class COCO(PairedDataset):
         with nostdout():
             self.train_examples, self.val_examples, self.test_examples = self.get_samples(roots, ids)
         examples = self.train_examples + self.val_examples + self.test_examples
-        print(examples[0])
+        print(examples[0].keys())
         super(COCO, self).__init__(examples, {'image': image_field, 'text': text_field})
 
     @property
